@@ -4,7 +4,6 @@ document.getElementById('default-memory').addEventListener('click', function () 
     getProductPrice('memory-cost', '0');
     decreamentTotal('memory-cost');
     increaseTotal();
-
     gettotalAmount();
 
 });
@@ -22,7 +21,6 @@ document.getElementById('extera-memory').addEventListener('click', function () {
 // 256 gb ssd storage 
 
 document.getElementById('default-storage').addEventListener('click', function () {
-
     getProductPrice('storage-cost', '0');
     decreamentTotal('storage-cost');
     increaseTotal();
@@ -32,18 +30,15 @@ document.getElementById('default-storage').addEventListener('click', function ()
 // 512gb ssd storage 
 
 document.getElementById('medium-storage').addEventListener('click', function () {
-
     getProductPrice('storage-cost', '100');
     decreamentTotal('storage-cost');
     increaseTotal();
     gettotalAmount()
 
-
 });
 // 1 tb ssd storage 
 
 document.getElementById('extra-storage').addEventListener('click', function () {
-
     getProductPrice('storage-cost', '180');
     decreamentTotal('storage-cost');
     increaseTotal();
@@ -54,7 +49,6 @@ document.getElementById('extra-storage').addEventListener('click', function () {
 /* delivery free btn */
 
 document.getElementById('delivery-free').addEventListener('click', function () {
-
     getProductPrice('delivery-input', "0");
     decreamentTotal('delivery-input');
     increaseTotal();
@@ -70,26 +64,18 @@ document.getElementById('delivery-cost').addEventListener('click', function () {
 
 });
 
-
-
 /* get memory storage  and delovery cost add function */
-
 function getProductPrice(input, price) {
     const productInput = document.getElementById(input);
     const productCost = parseFloat(productInput.innerText);
-
     return productInput.innerText = price;
 };
 
-
-
 // increment total function 
-
 function increaseTotal() {
     const memoryCost = document.getElementById('memory-cost');
     const memoryInnertext = parseFloat(memoryCost.innerText)
     const strogeCost = document.getElementById('storage-cost');
-
     const storegeInnertext = parseFloat(strogeCost.innerText);
     const deliveryField = document.getElementById('delivery-input');
     const deliveryInnertext = parseFloat(deliveryField.innerText);
@@ -97,14 +83,9 @@ function increaseTotal() {
     const bastPriceValue = parseFloat(bestPrice.innerText)
     const totalInput = document.getElementById('total-input');
     const totalInputInnertext = parseFloat(totalInput.innerText);
-
     const addTotal = memoryInnertext + storegeInnertext + deliveryInnertext + bastPriceValue;
-
     return totalInput.innerText = addTotal
 };
-
-
-
 // decreament total function
 
 function decreamentTotal(inputId) {
@@ -113,11 +94,8 @@ function decreamentTotal(inputId) {
     const inputPriceField = document.getElementById('total-input');
     const totalinnerText = parseFloat(inputPriceField.innerText);
     const decreamentAmounr = totalinnerText - currentvalue;
-
     return inputPriceField.innerText = decreamentAmounr;
 };
-
-
 
 // total amount  function
 
@@ -130,22 +108,17 @@ function gettotalAmount() {
     return totalpriceInput.innerText = totalAmountFieldinnerText;
 };
 
-
-
 /* using cupon code for discound discount   */
 // discount part 
-
 document.getElementById('cupon-field').addEventListener('focus', function (event) {
     event.target.style.outline = "none"
     event.target.style.border = "2px solid green"
     console.log(event.target)
 });
-
 document.getElementById('cupon-field').addEventListener('blur', function (event) {
     event.target.style.border = "2px solid #ddd"
     console.log(event.target)
 });
-
 document.getElementById('cupon-field').addEventListener('keyup', function (event) {
     if (event.target.value == "stevekaku") {
         document.getElementById('cupon-btn').removeAttribute("disabled",)
@@ -154,10 +127,6 @@ document.getElementById('cupon-field').addEventListener('keyup', function (event
         event.target.style.border = "2px solid red"
         document.getElementById('cupon-btn').setAttribute('disabled', true)
     };
-
-
-
-
 });
 
 document.getElementById('cupon-field').addEventListener('change', function (event) {
@@ -166,7 +135,6 @@ document.getElementById('cupon-field').addEventListener('change', function (even
 });
 
 document.getElementById('cupon-btn').addEventListener('click', function () {
-
     const totalAmount = document.getElementById('total-input');
     const totalAmountcost = parseFloat(totalAmount.innerText);
     const discount = ((totalAmountcost * 20) / 100);

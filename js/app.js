@@ -22,7 +22,7 @@ document.getElementById('extera-memory').addEventListener('click', function () {
 // 256 gb ssd storage 
 
 document.getElementById('default-storage').addEventListener('click', function () {
-    // getSsdStorage('storage-cost', '0');
+
     getProductPrice('storage-cost', '0');
     decreamentTotal('storage-cost');
     increaseTotal();
@@ -32,7 +32,7 @@ document.getElementById('default-storage').addEventListener('click', function ()
 // 512gb ssd storage 
 
 document.getElementById('medium-storage').addEventListener('click', function () {
-    // getSsdStorage('storage-cost', '100');
+
     getProductPrice('storage-cost', '100');
     decreamentTotal('storage-cost');
     increaseTotal();
@@ -43,7 +43,7 @@ document.getElementById('medium-storage').addEventListener('click', function () 
 // 1 tb ssd storage 
 
 document.getElementById('extra-storage').addEventListener('click', function () {
-    // getSsdStorage('storage-cost', '180');
+
     getProductPrice('storage-cost', '180');
     decreamentTotal('storage-cost');
     increaseTotal();
@@ -54,7 +54,7 @@ document.getElementById('extra-storage').addEventListener('click', function () {
 /* delivery free btn */
 
 document.getElementById('delivery-free').addEventListener('click', function () {
-    // getdeliveryCost('delivery-input', "0");
+
     getProductPrice('delivery-input', "0");
     decreamentTotal('delivery-input');
     increaseTotal();
@@ -64,7 +64,6 @@ document.getElementById('delivery-free').addEventListener('click', function () {
 // delivary cost btn
 
 document.getElementById('delivery-cost').addEventListener('click', function () {
-    // getdeliveryCost('delivery-input', "20");
     getProductPrice('delivery-input', "20");
     increaseTotal();
     gettotalAmount()
@@ -81,29 +80,6 @@ function getProductPrice(input, price) {
 
     return productInput.innerText = price;
 };
-
-/* comment part start */
-
-// get storage cost function
-
-// function getSsdStorage(input, price) {
-//     const storage = document.getElementById(input);
-//     const storageValue = parseFloat(storage.innerText);
-//     return storage.innerText = price;
-// }
-
-
-
-
-// delivery function
-
-// function getdeliveryCost(inputId, cost) {
-//     const deliveryInput = document.getElementById(inputId);
-//     const deliveryValue = parseFloat(deliveryInput.innerText);
-//     return deliveryInput.innerText = cost;
-// };
-
-/* comment part end */
 
 
 

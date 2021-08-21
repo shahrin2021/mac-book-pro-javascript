@@ -30,6 +30,7 @@ document.getElementById('default-storage').addEventListener('click', function ()
 
 });
 // 512gb ssd storage 
+
 document.getElementById('medium-storage').addEventListener('click', function () {
     // getSsdStorage('storage-cost', '100');
     getProductPrice('storage-cost', '100');
@@ -40,6 +41,7 @@ document.getElementById('medium-storage').addEventListener('click', function () 
 
 });
 // 1 tb ssd storage 
+
 document.getElementById('extra-storage').addEventListener('click', function () {
     // getSsdStorage('storage-cost', '180');
     getProductPrice('storage-cost', '180');
@@ -50,6 +52,7 @@ document.getElementById('extra-storage').addEventListener('click', function () {
 
 
 /* delivery free btn */
+
 document.getElementById('delivery-free').addEventListener('click', function () {
     // getdeliveryCost('delivery-input', "0");
     getProductPrice('delivery-input', "0");
@@ -58,6 +61,8 @@ document.getElementById('delivery-free').addEventListener('click', function () {
     gettotalAmount()
 
 });
+// delivary cost btn
+
 document.getElementById('delivery-cost').addEventListener('click', function () {
     // getdeliveryCost('delivery-input', "20");
     getProductPrice('delivery-input', "20");
@@ -66,8 +71,9 @@ document.getElementById('delivery-cost').addEventListener('click', function () {
 
 });
 
-/* delivery cost btn */
-// get memory cost function
+
+
+/* get memory storage  and delovery cost add function */
 
 function getProductPrice(input, price) {
     const productInput = document.getElementById(input);
@@ -100,6 +106,7 @@ function getProductPrice(input, price) {
 /* comment part end */
 
 
+
 // increment total function 
 
 function increaseTotal() {
@@ -119,6 +126,9 @@ function increaseTotal() {
 
     return totalInput.innerText = addTotal
 };
+
+
+
 // decreament total function
 
 function decreamentTotal(inputId) {
@@ -130,6 +140,8 @@ function decreamentTotal(inputId) {
 
     return inputPriceField.innerText = decreamentAmounr;
 };
+
+
 
 // total amount  function
 
@@ -143,32 +155,36 @@ function gettotalAmount() {
 };
 
 
-/* discount part  */
+
+/* using cupon code for discound discount   */
+// discount part 
+
 document.getElementById('copun-field').addEventListener('focus', function (event) {
     event.target.style.outline = "none"
     event.target.style.border = "2px solid green"
     console.log(event.target)
-})
+});
+
 document.getElementById('copun-field').addEventListener('blur', function (event) {
     event.target.style.border = "2px solid #ddd"
     console.log(event.target)
-})
+});
+
 document.getElementById('copun-field').addEventListener('keyup', function (event) {
     if (event.target.value == "stevekaku") {
         document.getElementById('copun-btn').removeAttribute("disabled")
         event.target.style.border = "2px solid green"
     } else if (event.target.value != "stevekaku") {
         event.target.style.border = "2px solid red"
-    }
-    else {
+    } else {
         document.getElementById('copun-btn').setAttribute('disabled', true)
     }
-})
+});
 
 document.getElementById('copun-field').addEventListener('change', function (event) {
     event.target.style.border = "2px solid #ddd"
     console.log(event.target)
-})
+});
 
 document.getElementById('copun-btn').addEventListener('click', function () {
 
@@ -178,7 +194,7 @@ document.getElementById('copun-btn').addEventListener('click', function () {
     const discountAmount = discount;
     const withDiscoundTotal = totalAmountcost - discountAmount;
     document.getElementById('total-amount').innerText = withDiscoundTotal;
-})
+});
 
 
 

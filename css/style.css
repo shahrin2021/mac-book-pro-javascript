@@ -1,0 +1,119 @@
+/*============= google font link ================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*======= base ==========*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    
+}
+
+img{
+    max-width: 100%;
+}
+
+/* =========section=========== */
+.macBook__section{
+   
+}
+
+.heading-title{
+    font-size: 50px;
+    margin-bottom: 60px;
+    color: rgb(255, 165, 0);
+}
+
+/* =======main css start =========*/
+
+  /*===== macBook__tiem title ===== */
+
+.mac-title{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/*====== macBook__tiem discribtion======== */
+
+.mac-discribtion{
+    font-size: 17px;
+    margin-bottom: 60px;
+}
+
+
+
+
+/*============= subtitles===================  */
+
+.memory-subtitle,
+.storage-subtitle,
+.delivery-subtitle{
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+.memory,.storage,.delivery{
+    margin-bottom: 40px;
+}
+
+/* ================buttons ================== */
+
+.button{
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+/*============== amount-area css ================== */
+
+.amount-area{
+border-top: 2px solid #000;
+max-width: 700px;
+margin: 0 auto;
+margin-top: 40px;
+text-align: center;
+}
+
+/*================ price-area css================ */
+
+.table-data{
+    border: none !important;
+    border-top: 2px solid #000000 !important;
+}
+
+.table-heading{
+    border: none !important;
+    border-top: 2px solid #000000 !important;  
+}
+
+.table-item{
+    font-size: 26px;
+}
+
+.total{
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/*================= cupon area======================  */
+
+.cupon-title{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.color{
+    color:rgb(240, 72, 42) ;
+}
+
+
+@media (max-width:991px){
+    .m-bottom{
+        margin-bottom: 20px;
+    };
+
+
+};
+
+    

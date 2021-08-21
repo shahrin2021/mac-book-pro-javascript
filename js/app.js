@@ -135,34 +135,37 @@ function gettotalAmount() {
 /* using cupon code for discound discount   */
 // discount part 
 
-document.getElementById('copun-field').addEventListener('focus', function (event) {
+document.getElementById('cupon-field').addEventListener('focus', function (event) {
     event.target.style.outline = "none"
     event.target.style.border = "2px solid green"
     console.log(event.target)
 });
 
-document.getElementById('copun-field').addEventListener('blur', function (event) {
+document.getElementById('cupon-field').addEventListener('blur', function (event) {
     event.target.style.border = "2px solid #ddd"
     console.log(event.target)
 });
 
-document.getElementById('copun-field').addEventListener('keyup', function (event) {
+document.getElementById('cupon-field').addEventListener('keyup', function (event) {
     if (event.target.value == "stevekaku") {
-        document.getElementById('copun-btn').removeAttribute("disabled")
+        document.getElementById('cupon-btn').removeAttribute("disabled",)
         event.target.style.border = "2px solid green"
     } else if (event.target.value != "stevekaku") {
         event.target.style.border = "2px solid red"
-    } else {
-        document.getElementById('copun-btn').setAttribute('disabled', true)
-    }
+        document.getElementById('cupon-btn').setAttribute('disabled', true)
+    };
+
+
+
+
 });
 
-document.getElementById('copun-field').addEventListener('change', function (event) {
+document.getElementById('cupon-field').addEventListener('change', function (event) {
     event.target.style.border = "2px solid #ddd"
-    console.log(event.target)
+    // console.log(event.target)
 });
 
-document.getElementById('copun-btn').addEventListener('click', function () {
+document.getElementById('cupon-btn').addEventListener('click', function () {
 
     const totalAmount = document.getElementById('total-input');
     const totalAmountcost = parseFloat(totalAmount.innerText);
@@ -170,6 +173,8 @@ document.getElementById('copun-btn').addEventListener('click', function () {
     const discountAmount = discount;
     const withDiscoundTotal = totalAmountcost - discountAmount;
     document.getElementById('total-amount').innerText = withDiscoundTotal;
+    document.getElementById('cupon-field').value = "";
+    document.getElementById('cupon-btn').setAttribute('disabled', true);
 });
 
 
